@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>World's Best Mama</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        text-align: center;
+        padding: 50px;
+        color: #333;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: inline-block;
+    }
+
+    img {
+        width: 250px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        margin: 10px 0;
+    }
+
+    .votes {
+        font-size: 24px;
+        margin: 15px 0;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        background: #ff4d6d;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e63950;
+    }
+
+    .winner {
+        color: green;
+        font-size: 20px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <!-- 🔁 Replace this image with your mama's image -->
+    <img src="mama.jpg" alt="My Mama">
+
+    <h1>Vote for Best Mama ❤️</h1>
+
+    <div class="votes" id="voteCount">Votes: 999</div>
+
+    <button onclick="vote()">Vote 👍</button>
+
+    <div class="winner" id="winnerMsg"></div>
+</div>
+
+<script>
+    let votes = 000999;
+    function vote() {
+        votes++;
+
+        if (votes >= 1000000) {
+            document.getElementById("voteCount").innerText = "Votes: 1billion";
+            document.getElementById("winnerMsg").innerText = "🌍 World's Best Mama!";
+        } else {
+            document.getElementById("voteCount").innerText = "Votes: " + votes;
+        }
+    }
+</script>
+
+</body>
+</html>
